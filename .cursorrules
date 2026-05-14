@@ -1,0 +1,53 @@
+# KYLYVNYK CLUB — Cursor AI Rules (root shorthand)
+
+# Full rules are in .cursor/rules/\*.md and AGENT.md
+
+## Stack
+
+Next.js 15 App Router · React 19 · TypeScript 5 strict · Tailwind v4
+tRPC v11 · Prisma · Supabase Postgres · Auth.js v5 · next-intl
+@kyc/ui · @kyc/api · @kyc/db · @kyc/i18n · @kyc/config (turborepo pnpm)
+
+## Critical Rules Memorized
+
+1. ZERO hardcoded strings — only i18n keys from @kyc/i18n
+2. ZERO direct Prisma calls outside @kyc/api procedures
+3. ZERO `any` type — TypeScript strict everywhere
+4. ALL deletes = soft delete (deletedAt field)
+5. ALL admin mutations = auditedAdminProcedure + AuditLog write
+6. ALWAYS add keys to RU + EN + UK simultaneously
+7. ALWAYS add loading skeletons and empty states
+8. ALWAYS wrap non-critical side effects (email, push, audit) in try/catch
+9. NEVER expose secrets in NEXT_PUBLIC\_ vars
+10. NEVER skip rate limiting on public mutations
+11. DEFAULT to Server Components — "use client" only when required
+12. PREFER cursor pagination not offset
+13. ALWAYS sanitize audit payloads via sanitizeForAudit()
+14. NEW component → add to @kyc/ui with Storybook story first
+
+## Packages (Never Install Alternatives)
+
+Styling: Tailwind v4 + CVA + clsx + tailwind-merge
+Icons: lucide-react (tree-shake — named imports only)
+Animation: framer-motion (gate with NEXT_PUBLIC_DISABLE_ANIMATIONS)
+State: Zustand (UI) + TanStack Query (server)
+Forms: react-hook-form + zodResolver + Zod
+Auth: Auth.js v5 (web: credentials+Google+magic-link · admin: credentials+TOTP)
+Email: Resend + @react-email/components
+Files: uploadthing
+Push: web-push + Serwist SW
+Realtime: Supabase Realtime (chat only)
+Maps: react-leaflet (dynamic import, ssr:false)
+Charts: recharts (admin dashboard only)
+
+## FSD Layers (No Upward Imports)
+
+app → widgets → features → entities → shared → @kyc/\*
+
+## Response Format When Writing Code
+
+1. State which files you are creating/modifying
+2. Show full file contents (not snippets) for new files
+3. Show targeted diffs for modifications to existing files
+4. List Acceptance Criteria at the end
+5. List any manual steps (env vars, migrations, seed) clearly
