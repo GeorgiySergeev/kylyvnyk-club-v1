@@ -1,7 +1,7 @@
 # SKILLS — Index
 
-> Quick reference for Kylyvnyk Club skill playbooks: one focused file per
-> task type. Open only the skill you need; do not load everything at once.
+> Quick reference for Kylyvnyk Club skill playbooks: one focused file per task
+> type. Open only the skill you need; do not load everything at once.
 
 ## Available skills
 
