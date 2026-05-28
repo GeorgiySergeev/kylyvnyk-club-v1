@@ -96,11 +96,9 @@ kylyvnyk-club-v1/
 
 ## Docs Index
 
-- [Spec / ТЗ](docs/SPEC.md)
-- [Environment Variables](docs/ENV.md)
-- [Database ERD](docs/ERD.md)
-- [Deployment](docs/DEPLOY.md)
-- [Sprint Plan](docs/SPRINT.md)
-- [Contributing](docs/CONTRIBUTING.md)
-- [GDPR Policy](docs/GDPR.md)
-- [Pre-Launch Checklist](docs/CHECKLIST.md)
+- [Spec / ТЗ](docs/spec.md)
+- [Agent Guide](AGENT.md)
+- [Skills Index](docs/skills/SKILLS.md)
+- [API Rules](rules/api.md)
+- [Architecture Rules](rules/architecture.md)
+- [Testing Rules](rules/testing.md)
