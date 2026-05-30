@@ -25,8 +25,8 @@
 | Doc                       | Purpose                                | File                                       |
 | ------------------------- | -------------------------------------- | ------------------------------------------ |
 | Common Mistakes Reference | Anti-patterns before commit            | [common-mistakes.md](./common-mistakes.md) |
-| AGENT.md                  | Master agent constraints               | [AGENT.md](../AGENT.md)                    |
-| Cursor Rules              | Auto-loaded rules (architecture, etc.) | [.cursor/rules/](../.cursor/rules/)        |
+| AGENT.md                  | Master agent constraints               | [AGENT.md](../../AGENT.md)                 |
+| Cursor Rules              | Auto-loaded rules (architecture, etc.) | [rules/](../../rules/)                     |
 
 <!-- markdownlint-enable MD013 MD060 -->
 
@@ -64,8 +64,8 @@
 
 <!-- markdownlint-enable MD013 MD060 -->
 
-Router: `.cursor/rules/skills.md` maps keywords to these files in
-`docs/skills/`.
+Router: [rules/skills.md](../../rules/skills.md) maps keywords to these files
+in `docs/skills/`.
 
 ### Template
 
