@@ -22,12 +22,21 @@ function extractMarkdownLinks(markdown) {
     .filter((target) => !/^(https?:|mailto:|#)/.test(target))
 }
 
-function extractSkillFiles(markdown) {
+function toRepoRelative(absolutePath) {
+  return path.relative(repoRoot, absolutePath).split(path.sep).join('/')
+}
+
+function extractSkillFiles(sourceRelativePath) {
+  const markdown = readRepoFile(sourceRelativePath)
+  const linkedSkillFiles = extractMarkdownLinks(markdown)
+    .filter((target) => /^\.\/skill-\d{2}-[a-z0-9-]+\.md$/.test(target))
+    .map((target) => toRepoRelative(resolveMarkdownTarget(sourceRelativePath, target)))
+
   return [
     ...new Set(
-      [...markdown.matchAll(/docs\/skills\/skill-\d{2}-[a-z0-9-]+\.md/g)].map(
-        (match) => match[0],
-      ),
+      [
+        ...markdown.matchAll(/docs\/skills\/skill-\d{2}-[a-z0-9-]+\.md/g),
+      ].map((match) => match[0]).concat(linkedSkillFiles),
     ),
   ].sort()
 }
@@ -60,8 +69,8 @@ test('skill docs do not contain broken relative markdown links', () => {
 })
 
 test('skill router and skill index list the same skill playbooks', () => {
-  const indexedSkillFiles = extractSkillFiles(readRepoFile('docs/skills/SKILLS.md'))
-  const routedSkillFiles = extractSkillFiles(readRepoFile('rules/skills.md'))
+  const indexedSkillFiles = extractSkillFiles('docs/skills/SKILLS.md')
+  const routedSkillFiles = extractSkillFiles('rules/skills.md')
 
   assert.deepEqual(routedSkillFiles, indexedSkillFiles)
 
