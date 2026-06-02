@@ -26,7 +26,7 @@ Full human-readable index: [`docs/skills/SKILLS.md`](../docs/skills/SKILLS.md).
 | "schema change", "add column", "new model", "migration", "prisma" | docs/skills/skill-05-database-schema-change.md  |
 | "optimistic", "instant toggle", "feel snappy", "no loading flash" | docs/skills/skill-06-optimistic-ui-update.md    |
 | "send email", "new email template", "notify by email"             | docs/skills/skill-07-email-template.md          |
-| "send push", "notify user", "web push", "push notification"       | docs/skills/skill-08-push-notification.md       |
+| "send push", "notify user", "web push", "web-push"               | docs/skills/skill-08-push-notification.md       |
 | "new public page", "landing page", "SEO page", "marketing page"   | docs/skills/skill-09-public-page-with-seo.md    |
 | "new component", "design system", "add to ui kit", "storybook"    | docs/skills/skill-10-add-storybook-component.md |
 
