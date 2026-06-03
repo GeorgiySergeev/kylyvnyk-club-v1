@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": "20.x",
-    "pnpm": "9.x"
+    "node": ">=20 <23",
+    "pnpm": ">=9 <11"
   },
   "scripts": {
     "test": "node --test"
