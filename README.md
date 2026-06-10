@@ -25,7 +25,7 @@ pnpm install
 
 ```bash
 cp .env.example .env.local
-# Заполни переменные — см. docs/ENV.md
+# Заполни переменные — see the tracked docs below
 ```
 
 ### 3. Database Setup
@@ -48,7 +48,7 @@ pnpm dev          # запускает все apps через Turborepo
 
 ```bash
 pnpm turbo run lint typecheck    # проверка перед PR
-pnpm test                        # Vitest unit-тесты
+pnpm test                        # unit/invariant tests
 pnpm e2e                         # Playwright E2E
 pnpm build                       # production build всех приложений
 ```
@@ -68,7 +68,7 @@ kylyvnyk-club-v1/
 │   └── config/    # @kyc/config — Tailwind preset, Biome, tsconfig
 ├── e2e/           # Playwright E2E specs
 ├── docs/          # Project documentation
-├── .cursor/rules/ # AI Agent rules
+├── rules/         # AI Agent rules
 ├── turbo.json
 ├── pnpm-workspace.yaml
 └── AGENT.md
@@ -96,11 +96,7 @@ kylyvnyk-club-v1/
 
 ## Docs Index
 
-- [Spec / ТЗ](docs/SPEC.md)
-- [Environment Variables](docs/ENV.md)
-- [Database ERD](docs/ERD.md)
-- [Deployment](docs/DEPLOY.md)
-- [Sprint Plan](docs/SPRINT.md)
-- [Contributing](docs/CONTRIBUTING.md)
-- [GDPR Policy](docs/GDPR.md)
-- [Pre-Launch Checklist](docs/CHECKLIST.md)
+- [Spec / ТЗ](docs/spec.md)
+- [Skill Playbooks](docs/skills/SKILLS.md)
+- [Skill Router Rule](rules/skills.md)
+- [Agent Constraints](AGENT.md)
