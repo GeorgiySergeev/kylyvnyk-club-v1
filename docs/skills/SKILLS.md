@@ -25,8 +25,8 @@
 | Doc                       | Purpose                                | File                                       |
 | ------------------------- | -------------------------------------- | ------------------------------------------ |
 | Common Mistakes Reference | Anti-patterns before commit            | [common-mistakes.md](./common-mistakes.md) |
-| AGENT.md                  | Master agent constraints               | [AGENT.md](../AGENT.md)                    |
-| Cursor Rules              | Auto-loaded rules (architecture, etc.) | [.cursor/rules/](../.cursor/rules/)        |
+| AGENT.md                  | Master agent constraints               | [AGENT.md](../../AGENT.md)                 |
+| Cursor Rules              | Auto-loaded rules (architecture, etc.) | [rules/](../../rules/)                     |
 
 <!-- markdownlint-enable MD013 MD060 -->
 
@@ -60,12 +60,11 @@
 | ---- | -------------------------------------------------------------------- |
 | 1    | Add `docs/skills/skill-NN-<kebab-name>.md` using the template below. |
 | 2    | Add a row to the **Available skills** table in this file.            |
-| 3    | Add a trigger row in `.cursor/rules/skills.md`.                      |
+| 3    | Add a trigger row in `rules/skills.md`.                              |
 
 <!-- markdownlint-enable MD013 MD060 -->
 
-Router: `.cursor/rules/skills.md` maps keywords to these files in
-`docs/skills/`.
+Router: `rules/skills.md` maps keywords to these files in `docs/skills/`.
 
 ### Template
 
