@@ -1,7 +1,7 @@
 ---
 title: Skill 04 — Add a New Admin Route
 description: Use when adding a new section/page to apps/admin
-trigger: "new admin page", "admin section", "admin module"
+trigger: "new admin page", "admin section", "admin module", "admin CRUD"
 ---
 
 # Skill 04 — Add a New Admin Route
