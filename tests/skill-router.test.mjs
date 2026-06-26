@@ -118,7 +118,7 @@ test('skill router keywords match each skill frontmatter trigger list', () => {
 test('skill index reference links stay routable from docs/skills', () => {
   const source = readText(skillIndexPath)
   const failures = []
-  const localLinkPattern = /\[[^\]]+]\((?!https?:|mailto:|tel:)([^)]+)\)/gu
+  const localLinkPattern = /\[[^\]]+\]\((?!https?:|mailto:|tel:)([^)]+)\)/gu
 
   for (const match of source.matchAll(localLinkPattern)) {
     const rawTarget = match[1]?.split('#')[0]

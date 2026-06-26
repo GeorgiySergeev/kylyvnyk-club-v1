@@ -49,7 +49,7 @@ test('repository uses the conventional README.md filename', () => {
 
 test('local markdown links resolve case-sensitively', () => {
   const failures = []
-  const markdownLinkPattern = /!?\[[^\]]*]\(([^)]+)\)/gu
+  const markdownLinkPattern = /!?\[[^\]]*\]\(([^)]+)\)/gu
 
   for (const markdownFile of collectMarkdownFiles(rootDir)) {
     const source = readFileSync(markdownFile, 'utf8')
