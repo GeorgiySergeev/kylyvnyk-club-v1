@@ -1,7 +1,7 @@
 ---
 title: Skill 08 — Push Notification (Web Push)
 description: Use when adding a push notification trigger
-trigger: "send push", "notify user", "web push", "web-push"
+trigger: "send push", "notify user", "web push", "push notification"
 ---
 
 # Skill 08 — Push Notification (Web Push)
