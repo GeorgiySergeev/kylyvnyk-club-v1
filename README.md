@@ -68,7 +68,7 @@ kylyvnyk-club-v1/
 │   └── config/    # @kyc/config — Tailwind preset, Biome, tsconfig
 ├── e2e/           # Playwright E2E specs
 ├── docs/          # Project documentation
-├── .cursor/rules/ # AI Agent rules
+├── rules/         # AI Agent rules
 ├── turbo.json
 ├── pnpm-workspace.yaml
 └── AGENT.md
@@ -96,11 +96,9 @@ kylyvnyk-club-v1/
 
 ## Docs Index
 
-- [Spec / ТЗ](docs/SPEC.md)
-- [Environment Variables](docs/ENV.md)
-- [Database ERD](docs/ERD.md)
-- [Deployment](docs/DEPLOY.md)
-- [Sprint Plan](docs/SPRINT.md)
-- [Contributing](docs/CONTRIBUTING.md)
-- [GDPR Policy](docs/GDPR.md)
-- [Pre-Launch Checklist](docs/CHECKLIST.md)
+- [Spec / ТЗ](docs/spec.md)
+- [AI Agent Guide](AGENT.md)
+- [Skill Playbooks](docs/skills/SKILLS.md)
+- [Architecture Rules](rules/architecture.md)
+- [Testing Rules](rules/testing.md)
+- [Security Rules](rules/security.md)
